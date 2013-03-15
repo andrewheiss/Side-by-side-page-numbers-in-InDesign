@@ -27,7 +27,7 @@ Crazy tedious. But totally automatable with a script. Here's how to do it (works
 
 # License
 
-All files in this repository are free and open source research software and are provided under the MIT license.
+All files in this repository are free and open source software and are provided under the MIT license.
 
 Copyright (C) 2013 Andrew Heiss
 

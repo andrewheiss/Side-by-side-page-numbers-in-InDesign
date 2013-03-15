@@ -13,15 +13,16 @@ Crazy tedious. But totally automatable with a script. Here's how to do it (works
 # Using the script
 
 1. Select all the side-by-side pages in your InDesign document, right click on the selection, and deselect "Allow selected spreads to shuffle." This will let versos hold odd-numbered pages. If you don't do this, you'll get a lot of single-page spreads.  
-![](http://files.andrewheiss.com/images/side_by_side_numbers/spreads_shuffle.png)
+![Disable shuffling](http://files.andrewheiss.com/images/side_by_side_numbers/spreads_shuffle.png)
 2. Download `sideBySideNumbering.jsx` from GitHub and open it in ExtendScript Toolkit. You probably don't need to install it in your InDesign scripts folder (since the script parameters will change with each document you use it on). Ensure the IDE is using the InDesign library and not the default "ExtendScript Toolkit CS6."  
-![](http://files.andrewheiss.com/images/side_by_side_numbers/select_library.png)
+![Select object library](http://files.andrewheiss.com/images/side_by_side_numbers/select_library.png)
 3. Determine the absolute page numbers for the first and last pages of your side-by-side section. You can do this by counting manually (the very first page in your document is page 0, second is 1, etc.) or by selecting a page and running `app.activeWindow.activePage.documentOffset;` in the JavaScript Console.  
 ![JavaScript Console](http://files.andrewheiss.com/images/side_by_side_numbers/console.png)
 4. Replace the values for `startingPage` and `endingPage` with those numbers.
 5. Set `actualPage` to the number you want your side-by-side pages to start with.
 6. Modify the section options in lines 41–51. As they stand now, `englishSection` goes on the verso/left and `arabicSection` goes on the recto/right. See [documentation](http://jongware.mit.edu/idcs6js/pc_Section.html) for more details on what options can be set here. If you want identical numbers on both sides (i.e. not English/Arabic, but English/English, like for an atlas or some other single-language side-by-side document), modify `pageNumberStyle` for the `arabicSection`.
-7. Run the script. You should have a ton of new sections and everything should be numbered correctly.
+7. Run the script. You should have a ton of new sections and everything should be numbered correctly.  
+![All done!](http://files.andrewheiss.com/images/side_by_side_numbers/finished.png)
 
 
 # License

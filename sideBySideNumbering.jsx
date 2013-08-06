@@ -24,6 +24,7 @@ var endingPage = 195  // Absolute page number, zero-based. Can be even or odd (e
 
 // IMPORTANT: Make sure "Allow selected spread to shuffle" is disabled on all the pages in the startingPage-endingPage range, INCLDUING the next non-side-by-side page (if ending on an English verso).
 // ALSO IMPORTANT: Make sure there are no existing sections in the startingPage-endingPage range. The script will choke.
+// If you do have existing sections, run removeSections.jsx to, um, remove them.
 
 var actualPage = 1;  // The desired number of the first actual page
 
